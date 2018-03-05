@@ -1,0 +1,151 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--accent: tomato;
+	--calculator-border-color: #112;
+	--calculator-color: #556;
+	--calculator-color-light: #889;
+	--dark: #333;
+	--dark-grey: #111;
+	--light: #eee;
+	--light-grey: #fff;
+	--screen: #dfa;
+	--screen-text: #794;
+
+	--dark-border: 1px solid var(--dark-grey);
+	--light-border: 1px solid var(--light-grey);
+}
+
+body {
+	font-family: sans-serif;
+}
+button {
+	background-color: var(--light);
+	border-top: var(--light-border);
+	border-right: var(--dark-border);
+	border-bottom: var(--dark-border);
+	border-left: var(--light-border);
+	flex-basis: 25%;
+	flex-grow: 2;
+	font-family: monospace;
+	font-size: 1.5em;
+	height: 50px;
+}
+button:active {
+	border-top: var(--dark-border);
+	border-right: var(--light-border);
+	border-bottom: var(--light-border);
+	border-left: var(--dark-border);
+}
+button:focus {
+	outline: none;
+}
+h1 {
+	color: var(--light);
+	font-size: 0.875rem;
+	margin-bottom: 0.5rem;
+}
+
+.buttons {
+	border-radius: 0 0 0.5rem 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+.container {
+	margin: 0 auto;
+	max-width: 500px;
+	width: 90%;
+}
+.calculator {
+	background-image: linear-gradient(
+		135deg,
+		var(--calculator-color-light) 0%,
+		var(--calculator-color-light) 50%,
+		var(--calculator-color) 50%,
+		var(--calculator-color) 100%
+	);
+	border-bottom: 5px solid var(--calculator-border-color);
+	border-radius: 0.5rem;
+	border-right: 5px solid var(--calculator-border-color);
+	box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.5);
+	padding: 1rem;
+	margin: 5rem 0;
+}
+.display {
+	display: block;
+	background-color: var(--screen);
+	border-radius: 0.5rem 0.5rem 0 0;
+	color: var(--screen-text);
+	font-family: monospace;
+	font-size: 1.25rem;
+	margin-top: 1rem;
+	overflow: hidden;
+	padding: 1rem;
+	text-align: right;
+}
+.func-button {
+	background-color: var(--dark);
+	color: var(--light);
+}
+
+/* INDIVIDUAL BUTTONS */
+.one {
+	order: 0;
+}
+.two {
+	order: 1;
+}
+.three {
+	order: 2;
+}
+.add {
+	order: 3;
+}
+
+.four {
+	order: 4;
+}
+.five {
+	order: 5;
+}
+.six {
+	order: 6;
+}
+.subtract {
+	order: 7;
+}
+
+.seven {
+	order: 8;
+}
+.eight {
+	order: 9;
+}
+.nine {
+	order: 10;
+}
+.multiply {
+	order: 11;
+}
+
+.zero {
+	order: 12;
+}
+.decimal {
+	flex-basis: 12.5%;
+	order: 13;
+}
+.clear {
+	flex-basis: 12.5%;
+	order: 14;
+}
+.equals {
+	order: 15;
+}
+.divide {
+	order: 16;
+}
