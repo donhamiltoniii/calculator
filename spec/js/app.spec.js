@@ -191,7 +191,7 @@ describe('Calculator App', function() {
 	})
 
 	describe('equals', function() {
-		it('sets the value of operatorTwo', function() {
+		it('sets the value of operatorOne', function() {
 			// Arrange
 			var testDisplay = {
 				innerText: '679',
@@ -203,7 +203,7 @@ describe('Calculator App', function() {
 			equals(testDisplay)
 
 			// Assert
-			expect(parseFloat(state.operatorTwo)).toBe(testDisplay.innerText)
+			expect(parseFloat(state.operatorOne)).toBe(testDisplay.innerText)
 		})
 		it('does the operation', function() {
 			// Arrange
